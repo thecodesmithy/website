@@ -1,0 +1,149 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(./assets/main-cover.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: #fa5;
+
+  &:hover {
+    color: #fc8;
+  }
+}
+
+.site-wrapper {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 100vh;
+
+  &__left-pad,
+  &__right-pad {
+    display: flex;
+    flex: 0 1 20%;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 700px;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    footer {
+      display: flex;
+      flex: 0 1 160px;
+      background-color: rgba(0, 0, 0, 1);
+      border-top: 2px solid #333;
+    }
+  }
+}
+
+.content-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 6px solid white;
+  padding: 0 1em;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.footer {
+  font-size: 0.85rem;
+  color: #ccc;
+
+  &__box {
+    display: flex;
+    flex: 1 0 auto;
+    padding: 0 1.5em;
+  }
+}
+
+.infolist {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    line-height: 22px;
+  }
+}
+
+.text {
+  &-left {
+    text-align: start;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: end;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+@for $i from 1 through 100 {
+  .pad-#{$i} {
+    padding: #{$i}em;
+  }
+
+  .pad-left-#{$i} {
+    padding-left: #{$i}em;
+  }
+
+  .pad-right-#{$i} {
+    padding-right: #{$i}em;
+  }
+
+  .pad-top-#{$i} {
+    padding-top: #{$i}em;
+  }
+
+  .pad-bottom-#{$i} {
+    padding-bottom: #{$i}em;
+  }
+
+  .w-#{$i} {
+    width: #{$i + "%"};
+  }
+}
+
+.spinning {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
