@@ -1,5 +1,6 @@
+import React from 'react';
 import { render } from '@testing-library/react';
-import * as React from 'react';
+
 import CodeSmithyApp from '..';
 
 describe('when the application spins up', () => {

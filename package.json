@@ -12,13 +12,13 @@
     "cloud",
     "technology"
   ],
-  "homepage": "https://github.com/codesmithyltd/codesmithy#readme",
+  "homepage": "https://github.com/thecodesmithy/codesmithy.com#readme",
   "bugs": {
-    "url": "https://github.com/codesmithyltd/codesmithy/issues"
+    "url": "https://github.com/thecodesmithy/codesmithy.com/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/codesmithyltd/codesmithy.git"
+    "url": "git+ssh://git@github.com/thecodesmithy/codesmithy.com.git"
   },
   "license": "ISC",
   "author": "Paul Aldred-Bann",
@@ -31,8 +31,8 @@
     "build:stats": "NODE_ENV=development webpack --json > buildstats.json",
     "build:prod": "NODE_ENV=production webpack",
     "start": "NODE_ENV=development webpack serve",
-    "lint": "eslint .",
-    "test": "jest --runInBand --CI"
+    "lint": "eslint --fix .",
+    "test": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -41,25 +41,29 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
     "@testing-library/react": "^11.2.5",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^26.0.20",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.1.1",
-    "eslint": "^7.21.0",
+    "css-loader": "^5.1.2",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-json-files": "^0.8.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
-    "eslint-webpack-plugin": "^2.5.2",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.2.0",
+    "html-webpack-plugin": "^5.3.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.3.9",
@@ -69,11 +73,11 @@
     "prettier": "^2.2.1",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
-    "ts-jest": "^26.5.2",
-    "ts-loader": "^8.0.17",
-    "typescript": "^4.2.2",
+    "ts-jest": "^26.5.3",
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.2.3",
     "url-loader": "^4.1.1",
-    "webpack": "^5.24.2",
+    "webpack": "^5.25.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
   }
