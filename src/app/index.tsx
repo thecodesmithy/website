@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
+import Footer from '../footer';
 
 const App = (): React.ReactElement => {
   return (
@@ -24,6 +25,7 @@ const App = (): React.ReactElement => {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
       <div className="site-wrapper__right-pad"></div>
     </div>

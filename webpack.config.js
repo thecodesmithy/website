@@ -12,18 +12,28 @@ const config = {
     compress: true,
     contentBase: path.join(__dirname, 'dist'),
     hot: true,
+    publicPath: '/',
     watchContentBase: true,
   },
-  devtool: isDev && 'inline-source-map',
+  devtool: 'source-map',
   entry: {
     app: {
-      dependOn: 'deps',
+      dependOn: ['react'],
       import: [
         path.join(__dirname, 'src'),
         path.join(__dirname, 'src/app.scss'),
       ],
     },
-    deps: ['react', 'react-dom'],
+    react: ['react', 'react-dom'],
+    bootstrap: [
+      'bootstrap/dist/js/bootstrap.js',
+      'bootstrap/dist/css/bootstrap.css',
+    ],
+    'font-awesome': [
+      '@fortawesome/fontawesome-free/scss/fontawesome.scss',
+      '@fortawesome/fontawesome-free/scss/solid.scss',
+      '@fortawesome/fontawesome-free/scss/brands.scss',
+    ],
   },
   mode: isDev ? 'development' : 'production',
   module: {
@@ -40,30 +50,40 @@ const config = {
       },
       {
         test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         exclude: /node_modules/,
         test: /\.(png|jpe?g|gif|bmp)$/,
         loader: 'file-loader',
+        options: {
+          name: 'img/[name].[ext]',
+        },
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?*.*)$/,
-        loader: 'url-loader',
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
       },
     ],
   },
   output: {
-    filename: isDev ? '[name].bundle.js' : '[name].[contenthash].bundle.js',
+    filename: isDev
+      ? 'js/[name].bundle.js'
+      : 'js/[name].[contenthash].bundle.js',
     path: path.join(__dirname, 'dist'),
-    publicPath: '',
+    publicPath: '/',
   },
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.ProgressPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new ESLintPlugin(),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+    }),
     new HtmlWebpackPlugin({
       favicon: path.resolve(__dirname, 'public/favicon.png'),
       inject: 'body',
