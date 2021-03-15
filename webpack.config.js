@@ -10,10 +10,8 @@ const isDev = process.env.NODE_ENV === 'development';
 const config = {
   devServer: {
     compress: true,
-    contentBase: path.join(__dirname, 'dist'),
-    hot: true,
+    contentBase: __dirname + '/dist',
     publicPath: '/',
-    watchContentBase: true,
   },
   devtool: 'source-map',
   entry: {
@@ -91,9 +89,7 @@ const config = {
     }),
   ],
   resolve: {
-    alias: {
-      assets: path.resolve(__dirname, 'src/assets/'),
-    },
+    alias: {},
     extensions: ['.ts', '.tsx', '.js'],
   },
   target: 'web',

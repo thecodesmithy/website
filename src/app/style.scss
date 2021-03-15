@@ -1,0 +1,35 @@
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 1000px;
+  margin: 0 auto;
+
+  &__header {
+    color: inherit;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    color: inherit;
+    padding: 0 1em;
+
+    .clients {
+      > div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+      }
+    }
+  }
+
+  &__footer {
+    color: inherit;
+    border-top: 1px solid #333;
+  }
+}

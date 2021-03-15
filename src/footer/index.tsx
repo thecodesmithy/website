@@ -1,49 +1,56 @@
 import React from 'react';
+import './style.scss';
 
 const Footer = (): React.FC => {
   return (
-    <footer className="footer">
-      <div className="footer__box">
-        <ul className="infolist">
-          <li className="infolist__item">
-            <strong>Code Smithy Ltd</strong>
-          </li>
-          <li className="infolist__item">
-            Registered in England &amp; Wales 12066691
-          </li>
-          <li className="infolist__item">
-            <address>
-              <i className="fas fa-warehouse fa-fw"></i>
-              <a href="https://goo.gl/maps/tAZHfVruZZSgPTKC8">
-                86-90 Paul Street, London, EC2A 4NE
-              </a>
-            </address>
-          </li>
-          <li className="infolist__item">
-            <i className="fas fa-phone fa-fw" />
-            <a href="tel:02039209019‬">020 3920 9019‬</a>
-          </li>
-          <li className="infolist__item">
-            <i className="fas fa-mobile fa-fw" />
-            <a href="tel:07505494975">07505 494975</a>
-          </li>
-          <li className="infolist__item">
-            <i className="fas fa-envelope fa-fw" />
-            <a href="mailto:hello@thecodesmithy.co.uk">
-              hello@thecodesmithy.co.uk
-            </a>
-          </li>
-        </ul>
+    <footer className="footer row">
+      <div className="col-4">
+        <h5>Contact Us...</h5>
+        <div>
+          <strong>Code Smithy Ltd</strong>
+        </div>
+        <address>86-90 Paul Street, London, EC2A 4NE</address>
+        <div>Registered in England &amp; Wales 12066691</div>
+        <br />
+        <div>
+          <i className="fas fa-phone fa-fw" /> 020 3920 9019‬
+        </div>
+        <div>
+          <i className="fas fa-mobile fa-fw" /> 07505 494975
+        </div>
+        <div>
+          <i className="fas fa-envelope fa-fw" /> hello@thecodesmithy.co.uk
+        </div>
       </div>
-      <div className="footer__box">
-        <ul className="infolist w-100">
-          <li className="infolist__item text-right w-100">
-            <i className="fab fa-linkedin fa-fw"></i>
+      <div className="offset-4 col-4">
+        <h5>Find us on socials...</h5>
+        <div className="row">
+          <div className="col-2">
             <a href="https://www.linkedin.com/company/19269440/admin/">
-              Follow us on LinkedIn
+              <i className="fab fa-linkedin fa-3x"></i>
             </a>
-          </li>
-        </ul>
+          </div>
+          <div className="col-2">
+            <a href="https://www.linkedin.com/company/19269440/admin/">
+              <i className="fab fa-facebook fa-3x"></i>
+            </a>
+          </div>
+          <div className="col-2">
+            <a href="https://www.linkedin.com/company/19269440/admin/">
+              <i className="fab fa-twitter fa-3x"></i>
+            </a>
+          </div>
+          <div className="col-2">
+            <a href="https://www.linkedin.com/company/19269440/admin/">
+              <i className="fab fa-instagram fa-3x"></i>
+            </a>
+          </div>
+          <div className="col-2">
+            <a href="https://www.linkedin.com/company/19269440/admin/">
+              <i className="fab fa-discord fa-3x"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
