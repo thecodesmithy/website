@@ -21,9 +21,8 @@
 
     .clients {
       > div {
-        width: 100px;
-        height: 100px;
-        border: 1px solid red;
+        flex: 0 1 auto;
+        align-content: center;
       }
     }
   }

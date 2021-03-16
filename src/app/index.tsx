@@ -1,14 +1,6 @@
 import React from 'react';
 import Footer from '../footer';
 import Logo from '../assets/logo.png';
-import ANDLogo from '../assets/and-digital-logo.png';
-import AOLogo from '../assets/ao-logo.png';
-import CoveaLogo from '../assets/covea-logo.png';
-import EELogo from '../assets/ee-logo.png';
-import EvestorLogo from '../assets/evestor-logo.png';
-import OdeonLogo from '../assets/odeon-logo.png';
-import PSLLogo from '../assets/psl-logo.png';
-import XFXLogo from '../assets/xfx-logo.png';
 import './style.scss';
 
 const App = (): React.ReactElement => {
@@ -38,33 +30,6 @@ const App = (): React.ReactElement => {
           that the time we spend building products is time well spent with
           nothing going to waste.
         </p>
-        <h3>Some of the companies our people have worked with...</h3>
-        <div className="row clients">
-          <div className="col-2">
-            <img src={ANDLogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={AOLogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={CoveaLogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={EELogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={EvestorLogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={OdeonLogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={PSLLogo} alt="" className="img-fluid" />
-          </div>
-          <div className="col-2">
-            <img src={XFXLogo} alt="" className="img-fluid" />
-          </div>
-        </div>
       </div>
       <div className="site-wrapper__footer">
         <Footer />
